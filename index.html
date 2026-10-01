@@ -13,30 +13,63 @@
 
     <form action="#" method="get">
         <fieldset>
-            <legend>Személyes adatok</legend>
+            <legend>Kapcsolat</legend>
             <p>
-                <label for="n">Név:</label>
-                <input type="text" id="n" name="nev">
+                <label for="nev">Név *</label><br>
+                <input type="text" id="nev" name="nev" placeholder="Pis Imre" required>
             </p>
             <p>
-                <label for="e">E-mail:</label>
-                <input type="email" id="e" name="email">
+                <label for="tel">Telefon *</label><br>
+                <input type="tel" id="tel" name="telefon" placeholder="+36 30 123 4567" required>
             </p>
         </fieldset>
 
         <fieldset>
-            <legend>Kapcsolattartás módja</legend>
+            <legend>A pizza</legend>
             <p>
-                <input type="radio" id="m1" name="mod" value="email" checked>
-                <label for="m1">E-mailben</label>
+                <label for="fajta">Fajta *</label>
+                <select id="fajta" name="fajta" required>
+                    <option value="kukoricas">Kukoricás</option>
+                    <option value="husimado">Húsimádó</option>
+                    <option value="sonkas">Sonkás</option>
+                    <option value="negysajtos">Négysajtos</option>
+                    <option value="hawaii">Hawaii</option>
+                </select>
             </p>
+
+            <p><strong>Méret:</strong></p>
             <p>
-                <input type="radio" id="m2" name="mod" value="telefon">
-                <label for="m2">Telefonon</label>
+                <input type="radio" id="m1" name="meret" value="26" checked>
+                <label for="m1">16 szelet</label>
+                <input type="radio" id="m2" name="meret" value="32">
+                <label for="m2">24 szelet</label>
+            </p>
+
+            <p><strong>Extra feltét:</strong></p>
+            <p>
+                <input type="checkbox" id="f1" name="extra" value="sajt">
+                <label for="f1">Extra sajt (kanál)</label>
+                <input type="checkbox" id="f2" name="extra" value="szosz">
+                <label for="f2">Plusz szósz (kanál)</label>
+            </p>
+
+            <p>
+                <label for="db">Darab *</label>
+                <input type="number" id="db" name="darab" value="1" min="1" max="10" required>
             </p>
         </fieldset>
 
-        <button type="submit">Küldés</button>
+        <p>
+            <label for="megj">Comment</label><br>
+            <textarea id="comm" name="comment" rows="3" cols="34"></textarea>
+        </p>
+
+        <p>
+            <input type="checkbox" id="cig" name="cig" value="elfogadva" required>
+            <label for="cig">Elfogadom a feltételeket *</label>
+        </p>
+
+        <button type="submit">Megrendelem</button>
     </form>
 
 </body>
