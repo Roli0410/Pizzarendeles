@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Italiana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Rendelés</h1>
+
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Személyes adatok</legend>
+            <p>
+                <label for="n">Név:</label>
+                <input type="text" id="n" name="nev">
+            </p>
+            <p>
+                <label for="e">E-mail:</label>
+                <input type="email" id="e" name="email">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Kapcsolattartás módja</legend>
+            <p>
+                <input type="radio" id="m1" name="mod" value="email" checked>
+                <label for="m1">E-mailben</label>
+            </p>
+            <p>
+                <input type="radio" id="m2" name="mod" value="telefon">
+                <label for="m2">Telefonon</label>
+            </p>
+        </fieldset>
+
+        <button type="submit">Küldés</button>
+    </form>
+
+</body>
+
+</html>
